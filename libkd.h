@@ -16,12 +16,25 @@
    All other files should just #include "libkd.h" without the #define.
  ============================================================================
 */
-#ifdef LIBKD_IMPLEMENTED
+#ifndef LIBKD_IMPLEMENTED
 
-#include <stdlib.h>     /// stdlib could have min/max
-#include <stdio.h>      /// need FILE
-#include <string.h>     /// memcpy / memset / strcpy / strlen /strncmp /
-#include <time.h>       ///
+/// Include Standard C Libraries
+/// More informations can be found here:   https://www.tutorialspoint.com/c_standard_library/index.htm
+#include <assert.h>     /// Debug and tests
+#include <ctype.h>      /// Testing and mapping characters
+#include <errno.h>      /// Error indication
+#include <float.h>      /// Float operations
+#include <limits.h>     /// Contains limits valious
+#include <locale.h>     /// Location specific setting
+#include <math.h>       /// Mathematical functions
+#include <setjmp.h>     /// For bypassing normal function calls
+#include <signal.h>     /// Defines macros to handle signals reported during a program's execution
+#include <stdarg.h>     /// For getting the number of arguments in not known
+#include <stddef.h>     /// Contains various variable types and macros
+#include <stdio.h>      /// I/O operations (FILE, etc.)
+#include <stdlib.h>     /// General functions (stdlib could have min/max)
+#include <string.h>     /// For manipulating arrays of characters (memcpy / memset / strcpy / strlen /strncmp)
+#include <time.h>       /// For manipulating date and time
 
 #ifndef LIBKD_BOOL /// Boolean definition
     #define LIBKD_BOOL
