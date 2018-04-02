@@ -16,25 +16,37 @@
    All other files should just #include "libkd.h" without the #define.
  ============================================================================
 */
-#ifndef LIBKD_IMPLEMENTED
+#ifdef LIBKD_IMPLEMENTED
 
 /// Include Standard C Libraries
 /// More informations can be found here:   https://www.tutorialspoint.com/c_standard_library/index.htm
 #include <assert.h>     /// Debug and tests
+#include <complex.h>
 #include <ctype.h>      /// Testing and mapping characters
 #include <errno.h>      /// Error indication
+#include <fenv.h>
 #include <float.h>      /// Float operations
+#include <inttypes.h>
 #include <limits.h>     /// Contains limits valious
 #include <locale.h>     /// Location specific setting
 #include <math.h>       /// Mathematical functions
 #include <setjmp.h>     /// For bypassing normal function calls
 #include <signal.h>     /// Defines macros to handle signals reported during a program's execution
+#include <stdalign.h>
 #include <stdarg.h>     /// For getting the number of arguments in not known
+#include <stdatomic.h>
+#include <stdbool.h>
 #include <stddef.h>     /// Contains various variable types and macros
+#include <stdint.h>
 #include <stdio.h>      /// I/O operations (FILE, etc.)
 #include <stdlib.h>     /// General functions (stdlib could have min/max)
+#include <stdnoreturn.h>
 #include <string.h>     /// For manipulating arrays of characters (memcpy / memset / strcpy / strlen /strncmp)
+#include <tgmath.h>
+#include <pthread.h>    /// For multithreading
 #include <time.h>       /// For manipulating date and time
+#include <wchar.h>
+#include <wctype.h>
 
 #ifndef LIBKD_BOOL /// Boolean definition
     #define LIBKD_BOOL
