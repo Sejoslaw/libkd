@@ -55,19 +55,19 @@
     #define False 0
 #endif /// LIBKD_BOOL
 
-#define libkd_min(a,b) ((a) < (b) ? (a) : (b)) /// Min value
-#define libkd_max(a,b) ((a) > (b) ? (a) : (b)) /// Max value
+#define LIBKD_Min(a,b) ((a) < (b) ? (a) : (b)) /// Min value
+#define LIBKD_Max(a,b) ((a) > (b) ? (a) : (b)) /// Max value
 
 #ifndef M_PI /// Pi definition
      #define M_PI  3.14159265358979323846f
 #endif /// M_PI
 
-#ifndef deg2rad /// Degree to Radian
-   #define deg2rad(a)  ((a)*(M_PI/180))
+#ifndef LIBKD_Deg2Rad /// Degree to Radian
+   #define LIBKD_Deg2Rad(a)  ((a)*(M_PI/180))
 #endif /// deg2rad
 
-#ifndef rad2deg /// Radian to Degree
-   #define rad2deg(a)  ((a)*(180/M_PI))
+#ifndef LIBKD_Rad2Deg /// Radian to Degree
+   #define LIBKD_Rad2Deg(a)  ((a)*(180/M_PI))
 #endif /// rad2deg
 
 #ifdef __cplusplus /// If C++ is defined
@@ -79,7 +79,7 @@
 /// ======================================== String Operations ========================================
 
 /// Appends the string2 to the end of string1
-LIBKD_EXTERN char *libkd_string_append(char *string1, char *string2)
+LIBKD_EXTERN char *LIBKD_StringAppend(char *string1, char *string2)
 {
     /// allocate memory for new string
     char *return_string = malloc(strlen(string1) + strlen(string2) + 1);
@@ -89,7 +89,7 @@ LIBKD_EXTERN char *libkd_string_append(char *string1, char *string2)
         strcat(return_string, string2);
         return return_string; /// returns constructed string
     } else {
-        printf("LIBKD: Memory allocation failed when allocating memory for new string. See libkd_string_append");
+        printf("LIBKD: Memory allocation failed when allocating memory for new string. See LIBKD_StringAppend");
         return "NULL";
     }
 }

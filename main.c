@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     printf("String2 = %s", s2);
     printf("\n\n");
 
-    char *ret = libkd_string_append(s1, s2);
+    char *ret = LIBKD_StringAppend(s1, s2);
     printf("String3 = %s", ret);
     printf("\n\n");
 
